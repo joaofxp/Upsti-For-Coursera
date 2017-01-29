@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     Transform _transform;
     Vector3 targetPosition;
+    public float speed = 1.5f;
 
     bool CanMove;
 
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour {
                 targetPosition = hit.point;
             }
         }
-        _transform.transform.position = Vector3.Lerp(_transform.transform.position, targetPosition, Time.deltaTime * 1.5f);
+        _transform.transform.position = Vector3.Lerp(_transform.transform.position, targetPosition, Time.deltaTime * speed);
         if (GetComponent<Rigidbody>().velocity.sqrMagnitude > 0.5f)
         {
             GetComponent<Rigidbody>().velocity *= 0.1f;

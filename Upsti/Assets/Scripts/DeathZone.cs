@@ -9,10 +9,10 @@ public class DeathZone : MonoBehaviour {
         switch (other.tag)
         {
             case "Player":
-                GameManager.singleton.PlayerLose();
+                GameController.singleton.PlayerLose();
                 break;
             case "FreeCube":
-                GameManager.singleton.PlayerWin();
+                GameController.singleton.PlayerWin();
                 break;
             default:
                 break;

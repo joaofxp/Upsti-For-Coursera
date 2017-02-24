@@ -12,17 +12,30 @@ public class GameController : MonoBehaviour {
 
     void Awake()
     {
-        singleton = this;
+        if (singleton == null)
+        {
+            singleton = this;
+        }
+        else if (singleton != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void PlayerWin()
     {
-        WinPanel.SetActive(true);
+        if (!LosePanel.activeSelf)
+        {
+            WinPanel.SetActive(true);
+        }
     }
 
     public void PlayerLose()
     {
-        LosePanel.SetActive(true);
+        if (!WinPanel.activeSelf)
+        {
+            LosePanel.SetActive(true);
+        }
     }
 
     public void PanelsHide()

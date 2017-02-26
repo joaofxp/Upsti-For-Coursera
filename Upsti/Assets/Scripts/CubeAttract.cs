@@ -60,7 +60,7 @@ public class CubeAttract : MonoBehaviour {
     IEnumerator Winable(float duration)
     {
         CanWin = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(duration);
         CanWin = false;
     }
 }

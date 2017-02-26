@@ -53,11 +53,11 @@ public class PlayerController : MonoBehaviour {
         if (!Physics.Raycast(transform.position, Vector3.down,100f))
         {
             _rigidbody.useGravity = true;
-            print("FALL");
+            // print("FALL");
         } else if (_rigidbody.useGravity == true && Physics.Raycast(transform.position, Vector3.down))
         {
             _rigidbody.useGravity = false;
-            print("STOP");
+            // print("STOP");
         }
         //_transform.transform.position = Vector3.Lerp(_transform.transform.position, targetPosition, Time.deltaTime * speed);
 

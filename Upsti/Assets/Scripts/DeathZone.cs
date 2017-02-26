@@ -15,6 +15,8 @@ public class DeathZone : MonoBehaviour {
                 if (CubeAttract.singleton.CanWin)
                 {
                     GameController.singleton.PlayerWin();
+                } else {
+                    GameController.singleton.PlayerLose();   
                 }
                 break;
             default:
